@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vrundaavan</string>
+    <string name="middle_lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin</string>
+    <string name="shop_address">Shop No.1 CHENDANI Kolivada Op. Thane College(WEST), Thane - 421 301\n9920214748</string>
+    <string name="shop_name">Vrundaavan Enterprises</string>
+    <string name="hint">First &amp; Last Name</string>
+    <string name="forgot_stat">We just need your registered email address to send you password reset.</string>
+</resources>

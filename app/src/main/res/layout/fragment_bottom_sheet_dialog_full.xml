@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyt_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/grey_900">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/bt_close"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_close" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/name_toolbar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="New event"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@android:color/white" />
+
+            <!--  <ImageButton
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_create" />
+
+            <ImageButton
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_more_vert" />
+-->
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_corner_snap"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <LinearLayout
+                android:id="@+id/lyt_profile"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginBottom="@dimen/spacing_xmedium"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/image_shop_2" />
+
+                <View
+                    android:layout_width="@dimen/spacing_large"
+                    android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginBottom="@dimen/spacing_xmedium"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Item Title"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_80" />
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Item Description"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textColor="@color/grey_80"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:background="@color/lightgrey" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/quantity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:hint="QUANTITY"
+                android:theme="@style/EditTextBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/quantity_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="@dimen/activity_horizontal_margin"
+
+                    app:fontFamily="@font/montserrat_bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:background="@color/lightgrey" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/date_exp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:hint="Delivery Date"
+                android:theme="@style/EditTextBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/delivery_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    app:fontFamily="@font/montserrat_bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_bold"
+
+                android:text="Status"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/grey_1000"
+                android:textStyle="bold"
+
+                />
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/other_button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12.0dip"
+                    android:text="Urgent"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/other_button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:padding="12.0dip"
+                    android:text="Not Urgent" />
+
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/prediction"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:hint="Predicted Amount"
+                android:theme="@style/EditTextBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/predicted_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    app:fontFamily="@font/montserrat_bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                android:background="@color/lightgrey" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/remark"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:hint="Remark"
+                android:theme="@style/EditTextBlue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/remark_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                   android:inputType="text"
+                    android:padding="@dimen/activity_horizontal_margin"
+
+                    app:fontFamily="@font/montserrat_bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<Spinner
+                android:id="@+id/status"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_corner5"
+                >
+
+
+            </Spinner>-->
+
+            <LinearLayout
+                android:id="@+id/food_bill"
+                android:layout_width="fill_parent"
+                android:layout_height="56.0dip"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:drawableStart="@drawable/ic_receipt_black_24dp"
+                    android:drawableLeft="@drawable/ic_receipt_black_24dp"
+                    android:drawablePadding="15.0dip"
+                    android:fontFamily="sans-serif-condensed"
+                    android:gravity="start|center"
+                    android:text="Order Details"
+                    android:textColor="@color/grey_1000"
+                    android:textSize="18.0sp"
+                    android:textStyle="bold" />
+                <!--     <TextView
+                android:textSize="22.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/grey_1000"
+                android:gravity="end|center"
+                android:id="@+id/total_price"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="₹ 2070/-"
+                android:layout_weight="0.4"
+                android:fontFamily="sans-serif-condensed" />
+-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/recycler_placeName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5.0dip"
+                    android:text="Vrundaavan Enterprises"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@color/grey_1000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/recycler_placeAddress2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5.0dip"
+                    android:text="@string/shop_address"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="@color/fontColor" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:background="@color/lightgrey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15.0dip">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:text="Quantity"
+                        android:textColor="@color/fontColor"
+                        android:textSize="13.0sp"
+
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/recycler_subTotal"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="end"
+                        android:text="2000"
+                        android:textColor="@color/fontColor"
+                        android:textSize="13.0sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:text="Order Date"
+                        android:textColor="@color/fontColor"
+                        android:textSize="13.0sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/order_date_text"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="end"
+                        android:text="Jul,12 2019"
+                        android:textColor="@color/fontColor"
+                        android:textSize="13.0sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:text="Dilevery Date"
+                        android:textColor="@color/fontColor"
+                        android:textSize="13.0sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/delivery_date_text"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="end"
+                        android:text="Not Selected"
+                        android:textColor="@color/fontColor"
+                        android:textSize="13.0sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="start"
+                        android:text="Order Status"
+                        android:textColor="@color/fontColor"
+                        android:textSize="13.0sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/recycler_delivery"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="end"
+                        android:text="Not Urgent"
+                        android:textColor="@color/fontColor"
+                        android:textSize="13.0sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+                <!-- <View android:background="@color/lightgrey"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="15.0dip" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginTop="15.0dip"
+                android:weightSum="2.0"
+                android:layout_weight="1.0">
+                <TextView
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_1000"
+                    android:gravity="start"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:layout_weight="1.0" />
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_1000"
+                    android:gravity="end"
+                    android:id="@+id/recycler_Total"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="₹2070"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+            <View android:background="@color/lightgrey"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginTop="15.0dip" />-->
+                <!--  <LinearLayout
+                android:orientation="horizontal"
+                android:padding="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3.0">
+                <ImageView
+                    android:background="@drawable/btn_corner5"
+                    android:padding="10.0dip"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_account_balance_black_24dp"
+                    android:tint="@color/fontColor"
+                    android:layout_weight="0.5" />
+                <LinearLayout android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5.0dip"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.7"
+                    android:layout_marginStart="15.0dip"
+                    android:layout_marginLeft="15.0dip">
+                    <TextView android:textStyle="bold"
+                        android:textColor="@color/grey_1000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canara Bank" />
+                    <TextView android:textSize="12.0sp"
+                        android:textColor="@color/fontColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1234 5678 9101 XXXX" />
+                </LinearLayout>
+                <TextView android:textSize="12.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey_1000"
+                    android:gravity="end"
+                    android:layout_gravity="end|center"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Change"
+                    android:layout_weight="0.8" />
+            </LinearLayout>-->
+                <Button
+                    android:id="@+id/proceed_order"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/btn_corner5"
+                    android:backgroundTint="@color/grey_1000"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Procced to Order"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lyt_spacer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

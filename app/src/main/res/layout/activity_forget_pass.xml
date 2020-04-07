@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activites.ForgetPass"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <ImageButton
+        android:background="#FAFAFA"
+        android:id="@+id/backToLogin"
+        android:layout_width="25dp"
+        android:layout_margin="@dimen/spacing_medium"
+        android:layout_height="?attr/actionBarSize"
+        app:srcCompat="@drawable/ic_arrow_back"
+        android:tint="@color/grey_1000"
+        />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/spacing_middle" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:srcCompat="@drawable/ic_lock_black_24dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FORGOT PASSWORD"
+        android:textColor="@color/grey_1000"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:layout_marginTop="@dimen/spacing_large"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_stat"
+        android:textColor="@color/grey_1000"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_large"
+      android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:textAlignment="center"
+        />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10.0dip"
+
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="@color/lightgrey" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/quantity"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xmlarge"
+        android:layout_marginBottom="@dimen/spacing_medium"
+       android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:hint="EMAIL"
+        android:layout_gravity="center_vertical"
+        android:theme="@style/EditTextBlue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/forgetpassfield"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/activity_horizontal_margin"
+            app:fontFamily="@font/montserrat_bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/changepass"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_height="wrap_content"
+        android:text="reset password"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat_bold"
+        android:background="#00C853"
+     />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_large"/>
+</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditTextBlue">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="colorControlActivated">@color/grey_1000</item>
+        <item name="colorControlNormal">@color/fontColor</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/btn_corner_snap</item>
+
+    </style>
+</resources>
